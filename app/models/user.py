@@ -17,7 +17,6 @@ class User(Base):
 
     roles = relationship("UserRole", back_populates="user")
 
-# МОЁ
 class UserCreateSchema(BaseModel):
     email: EmailStr
     password: str = Field(max_length=30)
